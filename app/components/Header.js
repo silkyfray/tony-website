@@ -1,10 +1,8 @@
-var React = require("react")
-var styles = require("../styles/index")
+import React from "react"
+import {styles} from "../styles/index"
 
-function Header(props) {
+export default function Header(props) {
     return (
         <h1 style={styles.bigGlow}>{props.title}</h1>
     )
 }
-
-module.exports = Header

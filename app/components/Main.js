@@ -1,8 +1,8 @@
-var React = require("react")
-var Header = require("./Header")
+import React from "react" 
+import Header from "./Header"
 require('../main.css');
 
-function Main(props) {
+export default function Main(props) {
     return (
         <div className="main-container">
             <Header title="Hi, I am Tony" />
@@ -10,5 +10,3 @@ function Main(props) {
         </div>
     )
 }
-
-module.exports = Main
