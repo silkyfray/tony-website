@@ -1,5 +1,6 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from 'react'
+import ReactDOM from 'react-dom'
+var routes = require('./config/routes')
 
-ReactDOM.render(<h1>HELLO WORLD!</h1>,
- document.getElementById('app'))
+ReactDOM.render(routes,
+    document.getElementById('app'))
