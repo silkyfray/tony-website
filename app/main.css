@@ -6,3 +6,22 @@
 body {
     background: #101010
 }
+
+.navigation-bar {
+    /*flex properties*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*other*/
+    border-style: dashed;
+    list-style-type: none;
+}
+
+.navigation-bar > li {
+    border-style: dashed;
+    margin: auto 10px;
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+}
