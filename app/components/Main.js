@@ -5,7 +5,7 @@ require('../main.css');
 export default function Main(props) {
     return (
         <div className="main-container">
-            <Header title="Hi, I am Tony" />
+            <Header title="Tony Nikolov" />
             {props.children}
         </div>
     )
