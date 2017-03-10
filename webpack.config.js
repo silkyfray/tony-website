@@ -10,20 +10,23 @@ module.exports = {
         "./app/index.js"
     ],
     output: {
-        path: __dirname  + "/dist",
+        path: __dirname + "/dist",
         filename: "index_bundle.js"
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json']
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
             },
-            {test: /\.css$/, loader: "style-loader!css-loader"}
+            { test: /\.css$/, loader: "style-loader!css-loader" }
 
-        
+
         ]
     },
-        plugins: [HtmlWebpackPluginConfig]
+    plugins: [HtmlWebpackPluginConfig]
 }
