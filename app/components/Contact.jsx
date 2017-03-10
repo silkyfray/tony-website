@@ -3,7 +3,7 @@ require('../main.css');
 
 export default function Contact(props) {
     return (
-        <div className="content">
+        <div className="content-area">
             Contact
         </div>
     )

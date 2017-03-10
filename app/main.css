@@ -7,6 +7,7 @@ body {
     background: #101010
 }
 
+/* Navigation bar*/
 .navigation-bar {
     /*flex properties*/
     display: flex;
@@ -14,19 +15,15 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     /*other*/
-    /*border-style: solid;
-    border-color: #75d0d3;*/
     background: #131312;
     box-shadow: 0px 0px 5px 3px #75d0d3 ;
     list-style-type: none;
 }
 
 .navigation-link {
-    /*border-style: solid;
-    border-color: #75d0d3;*/
     border-radius: 10px;
+    margin: 0px 5px;
     text-shadow: 0 0 13px #65b6e1;
-
     padding: 0px 10px;
     font-size: 1.5em;
     font-weight: bold;
@@ -38,4 +35,32 @@ body {
     border-right: 2px solid;
     box-shadow: 0px 0px 2px 1px #75d0d3 ;
     border-color: #75d0d3;
+}
+
+/*Content area box*/
+.content-area {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-short {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    background: #65bee8;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 0px 5px 1px #75d0d3 ;
+    
+}
+.project-short-inner {
+    background: #3d3d3d;
+    border-radius: inherit;
+    width: 98%;
+    height: 98%;
+    margin: auto;
+    
 }

@@ -3,7 +3,7 @@ require('../main.css');
 
 export default function About(props) {
     return (
-        <div className="content">
+        <div className="content-area">
             About
         </div>
     )
