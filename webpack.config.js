@@ -50,8 +50,8 @@ module.exports = {
             filename: 'index.html',
             inject: 'body'
         }),
-        new CleanWebpackPlugin(['dist']),
-        // new CopyWebpackPlugin([{from:'./app/data', to: 'data'}])
+        //new CleanWebpackPlugin(['dist']),
+        new CopyWebpackPlugin([{from:'./app/data', to: 'data'}])
 
     ]
 }
