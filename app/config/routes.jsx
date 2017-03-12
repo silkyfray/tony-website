@@ -2,15 +2,15 @@ import React from 'react';
 // import ReactRouter from "react-router"
 import {ReactRouter, Router, Route, IndexRoute, hashHistory} from 'react-router';
 import Main from "../components/Main"
-import Projects from "../components/Projects"
 import About from "../components/About"
+import ProjectsContainer from "../components/ProjectsContainer"
 import Contact from "../components/Contact"
 
 var routes = (
     <Router history= {hashHistory}>
         <Route path="/" component={Main}>
-            <IndexRoute component={Projects} />
-            <Route path="/projects" component={Projects}/>
+            <IndexRoute component={ProjectsContainer} />
+            <Route path="/projects" component={ProjectsContainer}/>
             <Route path="/about" component={About}/>
             <Route path="/contact" component={Contact}/>
         </Route>

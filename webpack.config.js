@@ -1,10 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: __dirname + '/app/index.html',
-    filename: 'index.html',
-    inject: 'body'
-})
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -48,6 +45,13 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('style.css'),
-        HtmlWebpackPluginConfig
+        new HtmlWebpackPlugin({
+            template: __dirname + '/app/index.html',
+            filename: 'index.html',
+            inject: 'body'
+        }),
+        new CleanWebpackPlugin(['dist']),
+        // new CopyWebpackPlugin([{from:'./app/data', to: 'data'}])
+
     ]
 }
