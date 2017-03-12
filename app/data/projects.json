@@ -1,14 +1,47 @@
 {
     "projectSpecs" : [
         {
-            "header": "Project 1",
-            "subheader" : "2017 Personal",
-            "summary": "lorem ipsum dolos reis"
+            "header": "Mouse Escape",
+            "year": 2016  ,
+            "category": "Personal",
+            "summary": "Mice comes out of their little holes in the wall and your objective is to guide them back to other holes in the wall before cats get a sniff.",
+            "pictureUrl" : "/data/img/ProjectMouseEscape.png",
+            "githubUrl" : "https://github.com/silkyfray/EscapePrototype",
+            "youtubeUrl" : "https://www.youtube.com/watch?v=1P5p29etE44"
         },
         {
-            "header": "Project 1",
-            "subheader" : "2017 Personal",
-            "summary": "lorem ipsum dolos reis"
+            "header": "Luapath",
+            "year": 2014,
+            "category": "Personal",
+            "summary": "Luapath is a C++ library which makes loading of tables from Lua files very easy.",
+            "githubUrl" : "https://github.com/silkyfray/luapath"            
+        },
+        {
+            "header": "Volume Rendering Optimisations for Mobile Devices",
+            "year": 2015,
+            "category": "College",
+            "summary": "Research Dissertation for the degree of Master in Computer Science",
+            "pictureUrl": "data/img/VolumeRenderingCell.png",
+            "githubUrl" : "https://github.com/silkyfray/AndroidVolumeRenderer",
+            "documentUrl" : "https://drive.google.com/file/d/0Bxtcgc4YLzzoSm52a0hxeVN4eDA/view"            
+        },
+        {
+            "header": "Interactive Watercolor Rendering",
+            "year": 2015,
+            "category": "College",
+            "summary": "Demonstration of a non-photorealistic rendering style using watercolour abstraction.",
+            "pictureUrl": "data/img/watercolorRendering.png",
+            "githubUrl" : "https://github.com/silkyfray/CS7055-RealTimeRendering/tree/master/FinalProject",
+            "youtubeUrl" : "https://www.youtube.com/watch?v=PO0V5WqseoU"       
+        },
+        {
+            "header": "Order of the Black Hand",
+            "year": 2014,
+            "category": "College",
+            "summary": "Hand crafting code to do animation in 3D. I have to say animation has been the most difficult programming subject I have encountered.",
+            "pictureUrl": "data/img/BlackHand.png",
+            "githubUrl" : "https://github.com/silkyfray/CS7033-Animation-Interactive-Project",
+            "youtubeUrl" : "https://www.youtube.com/watch?v=YvTjiZkeq-A"       
         }
     ]
 }

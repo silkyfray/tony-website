@@ -25,7 +25,6 @@
 .picture {
     width: 130px;
     height: 130px;
-    background-size: 100% auto;
     margin-top: 12px;
     margin-right: 12px;
     float: right; 
@@ -43,11 +42,17 @@
 }
 
 .subheader {
-    font-style: italic;
     margin-left: 12px;
 }
 
 .innerBox > p {
     margin-left: 12px;
     height: 100px;   
+}
+
+.shareButton {
+    margin-top: 5px;
+    margin-left: 12px;
+    width: 30px;
+    height: 30px;
 }
