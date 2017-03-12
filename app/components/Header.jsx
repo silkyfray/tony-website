@@ -1,12 +1,12 @@
 import React from "react"
 import { ReactRouter, Link } from "react-router"
-import { styles } from "../styles/index"
+import styles from '../styles/Header.css'
 
 
 function NavLink(props) {
     return (
         <li>
-            <Link className="navigation-link" activeClassName="navigation-link-active" style={{textDecoration: "none"}} to={props.link}>
+            <Link className={styles.navigationLink} activeClassName={styles.navigationLinkActive} style={{textDecoration: "none"}} to={props.link}>
                 {props.children}
             </Link>
         </li>
@@ -16,8 +16,8 @@ function NavLink(props) {
 export default function Header(props) {
     return (
         <div>
-            <h1 style={styles.bigGlow}>{props.title}</h1>
-            <ul className="navigation-bar">
+            <h1>{props.title}</h1>
+            <ul className={styles.navigationBar}>
                 <NavLink link="/projects">Projects</NavLink>
                 <NavLink link="/about">About</NavLink>
                 <NavLink link="/contact">Contact</NavLink>

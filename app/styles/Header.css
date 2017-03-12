@@ -1,0 +1,28 @@
+/* Navigation bar*/
+.navigationBar {
+    /*flex properties*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*other*/
+    composes: glowyBoxShadow from "./Theme.css";
+    background: #131312;
+    list-style-type: none;
+}
+
+.navigationLink {
+    border-radius: 10px;
+    margin: 0px 5px;
+    padding: 0px 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navigationLinkActive{
+    border-left: 2px solid;
+    border-right: 2px solid;
+    composes: glowyBoxShadow from "./Theme.css";
+    border-color: #75d0d3;
+}

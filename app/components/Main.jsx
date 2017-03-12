@@ -1,12 +1,15 @@
 import React from "react" 
 import Header from "./Header"
-require('../main.css');
+require('./main.css')
+import styles from '../styles/Main.css'
 
 export default function Main(props) {
     return (
-        <div className="main-container">
+        <div>
             <Header title="Tony Nikolov" />
-            {props.children}
+            <div className={styles.contentArea}>
+                {props.children}
+            </div>
         </div>
     )
 }
