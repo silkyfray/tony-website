@@ -7,7 +7,7 @@ export default function Main(props) {
     return (
         <div>
             <Header title="Tony Nikolov" />
-            <div className={styles.contentArea}>
+            <div>
                 {props.children}
             </div>
         </div>
