@@ -13,8 +13,8 @@
     width: 98%;
     height: 98%;
     margin: auto;
-    overflow: scroll;
-    overflow-x:hidden;
+    /*overflow: scroll;
+    overflow-x:hidden;*/
 }
 
 .topInfo {

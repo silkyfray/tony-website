@@ -7,7 +7,7 @@ export default function Main(props) {
     return (
         <div>
             <Header title="Tony Nikolov" />
-            <div>
+            <div style={{width:"100%"}}>
                 {props.children}
             </div>
         </div>

@@ -2,10 +2,20 @@
     width: 300px;
 }
 
-.contentArea{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.contentCenteringBox {
+    align-items: center; 
+    display: flex; 
     justify-content: center;
+    flex-flow: row wrap;
 }
+
+.filterToolbar{
+    margin-top: 20px;
+    composes: contentCenteringBox;
+}
+
+.contentArea{
+    margin-top: 20px;
+    composes: contentCenteringBox
+}
+

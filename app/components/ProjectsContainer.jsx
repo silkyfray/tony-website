@@ -17,7 +17,10 @@ export default class ProjectsContainer extends React.Component {
         super(props);
         this.state = {
             projectSpecs: [],
-            minMaxYears: { min: 0, max: 0 }
+            minYears: 0,
+            maxYears: 0,
+            currMinYears: 0,
+            currMaxYears: 0,
         }
     }
     getMinMaxYears(projectSpecs) {
@@ -27,38 +30,40 @@ export default class ProjectsContainer extends React.Component {
         var max = projectSpecs.reduce(function (prev, curr) {
             return prev.year >= curr.year ? prev : curr;
         }).year;
-        return { "min": min, "max": max }
+        return [min, max]
     }
 
-    sliderChanged(value){
-        console.log("value:", value);
+    sliderChangeHandler(value) {
+        this.setState({ currMinYears: value[0], currMaxYears: value[1] });
     }
 
     componentDidMount() {
         this.setState({ projectSpecs: ProjectData.projectSpecs });
         // get the range of years
-        this.setState({ minMaxYears: this.getMinMaxYears(ProjectData.projectSpecs) });
+        var minMax = this.getMinMaxYears(ProjectData.projectSpecs);
+        this.setState({ minYears: minMax[0], maxYears: minMax[1] });
+        this.setState({ currMinYears: minMax[0], currMaxYears: minMax[1] });
     }
-    // load the data from the local projects file
-    // iterate over the data and instantiate ProjectShort for each
     render() {
         return (
             <div>
-                <div className={styles.yearSlider}>
-                    <Range min={this.state.minMaxYears.min}
-                        max={this.state.minMaxYears.max}
-                        defaultValue={[0,0]}
-                        value={[this.state.minMaxYears.min, this.state.minMaxYears.max]}
-                        dots = {true}
-                        marks = {{2014: 2014, 2016: 2016}}
-                        onChange={this.sliderChanged}
+                <div className={styles.filterToolbar}>
+                    <div className={styles.yearSlider}>
+                        <Range min={this.state.minYears}
+                            max={this.state.maxYears}
+                            value={[this.state.currMinYears, this.state.currMaxYears]}
+                            dots={true}
+                            marks={{ [this.state.minYears]: this.state.minYears, [this.state.maxYears]: this.state.maxYears }}
+                            onChange={this.sliderChangeHandler.bind(this)}
                         />
+                    </div>
                 </div>
-                <div className={styles.contentArea}>
+                {<div className={styles.contentArea}>
                     {this.state.projectSpecs.map(function (project, key) {
-                        return <ProjectShort key={key} spec={project} />
-                    })}
-                </div>
+                        if (project.year >= this.state.currMinYears && project.year <= this.state.currMaxYears)
+                            return <ProjectShort key={key} spec={project} />
+                    }, this)}
+                </div>}
             </div>
         )
     }
