@@ -1,0 +1,36 @@
+.contentArea {
+    margin-top: 40px;
+    composes: contentCenteringBox from './Theme.css';
+}
+
+.chatBoxContainer {
+    composes: solidBlueDarkBorder from './Theme.css';
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 6px;
+}
+
+.chatBoxMessages {
+    padding: 4px;
+    flex: 9;
+    overflow-y: scroll;
+}
+
+.chatBoxInput {
+    border-top: 6px solid #2138ad;
+    flex: 1;
+}
+
+.verticalTrack {
+    background: red;
+    position: 'absolute';
+    width: 6;
+}
+.verticalThumb {
+    background: green;
+    position: 'relative';
+    display: 'block';
+    width: '100%';
+}

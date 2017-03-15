@@ -2,20 +2,13 @@
     width: 300px;
 }
 
-.contentCenteringBox {
-    align-items: center; 
-    display: flex; 
-    justify-content: center;
-    flex-flow: row wrap;
-}
-
 .filterToolbar{
     margin-top: 20px;
-    composes: contentCenteringBox;
+    composes: contentCenteringBox from './Theme.css';
 }
 
 .contentArea{
     margin-top: 20px;
-    composes: contentCenteringBox
+    composes: contentCenteringBox from './Theme.css';
 }
 

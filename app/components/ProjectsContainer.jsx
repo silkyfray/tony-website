@@ -58,12 +58,12 @@ export default class ProjectsContainer extends React.Component {
                         />
                     </div>
                 </div>
-                {<div className={styles.contentArea}>
+                <div className={styles.contentArea}>
                     {this.state.projectSpecs.map(function (project, key) {
                         if (project.year >= this.state.currMinYears && project.year <= this.state.currMaxYears)
                             return <ProjectShort key={key} spec={project} />
                     }, this)}
-                </div>}
+                </div>
             </div>
         )
     }
