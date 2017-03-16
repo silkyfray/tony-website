@@ -21,16 +21,24 @@
 .chatBoxInput {
     border-top: 6px solid #2138ad;
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.verticalTrack {
-    background: red;
-    position: 'absolute';
-    width: 6;
+.chatBoxInputButton {
+    composes: glowyBoxShadowSmall from './Theme.css';
+    padding: 0px 10px 1px 2px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.3em;
 }
-.verticalThumb {
-    background: green;
-    position: 'relative';
-    display: 'block';
-    width: '100%';
+
+.chatBoxInputButton:hover{
+    background: #65bee8;
+    cursor: pointer;
+}
+
+.chatBoxInputButton > * {
+    vertical-align: middle;
 }

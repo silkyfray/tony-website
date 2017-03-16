@@ -1,0 +1,24 @@
+[
+    {
+        "text": "Hi, I am Tony. This is me on the left.",
+        "autoProceed": true
+    },
+    {
+        "text": "Press the 'Next' button at the bottom to find out more."
+    },
+    {
+        "text": "After studying for 5 years in Trinity College, I graduated with a Masters in Computer Science.",
+        "reveal": {
+            "category": "Technical",
+            "values" : ["Computer Science"]
+        }
+    },
+    {
+        "text": "Nowadays, I work as a software engineer in Automsoft. .NET and React.js are my daily bread-and-butter.",
+        "reveal": {
+            "category": "Technical",
+            "values" : ["Software Engineering", "C#", ".NET", "React.js"]
+        }
+    }
+    
+]
