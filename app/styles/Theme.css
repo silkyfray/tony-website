@@ -12,6 +12,14 @@
     border: 5px solid #2138ad;
 }
 
+.borderRadiusSmall {
+    border-radius: 6px;
+}
+
+.borderRadius {
+    border-radius: 12px;
+}
+
 .contentCenteringBox {
     align-items: center; 
     display: flex; 
@@ -19,3 +27,11 @@
     flex-flow: row wrap;
 }
 
+
+.picture {
+    composes: glowyBoxShadowSmall;
+    composes: solidBlueBorderSmall;
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+}

@@ -1,14 +1,18 @@
 curr:
-about page
+contact page
 
 todo:
+add more projects content
+add more about content
+add hover label for tag or shrink text to fit
+animation 0-100 scale for tags appearing
+animation page scale transition
 swap min max years
 fix strech on project short image
 project tab is not highlighted on start
 title subheading
 project short relayout
 add dummy at the min
-contact page
 footer with cool link
 sort incoming projects on year
 find nice styled scrollbar

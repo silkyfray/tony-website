@@ -10,8 +10,8 @@ function ShareButton(props) {
 }
 
 export default function ProjectShort(props) {
-    var picture = props.spec.pictureUrl ? <img src={props.spec.pictureUrl} className={styles.picture} />
-        : picture = <div className={styles.picture} />;
+    var picture = props.spec.pictureUrl ? <img src={props.spec.pictureUrl} className={styles.pictureProjectShort} />
+        : picture = <div className={styles.pictureProjectShort} />;
 
     return (
         <div className={styles.outerBox}>

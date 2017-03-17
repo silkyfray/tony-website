@@ -22,16 +22,11 @@
     height: 150px;
 }
 
-.picture {
-    width: 130px;
-    height: 130px;
+.pictureProjectShort {
+    composes: picture from './Theme.css';
     margin-top: 12px;
     margin-right: 12px;
     float: right; 
-    border-radius: 12px;
-    composes: glowyBoxShadowSmall from './Theme.css';
-    composes: solidBlueBorderSmall from './Theme.css';
-
 }
 
 .header {
