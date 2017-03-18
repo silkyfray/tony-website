@@ -47,15 +47,33 @@
 
 
 /*Animation styles*/
-.example-enter {
+.opacity-enter {
   opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.opacity-enter.opacity-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in-out;
 }
 
-.example-leave {
+.opacity-leave {
   opacity: 0;
+}
+
+
+.scale-enter {
+  transform: scale(0)
+}
+
+.scale-enter.scale-enter-active {
+  transform: scale(1);
+  transition: all 500ms ease-in-out;
+}
+
+.scale-leave {
+  transform: scale(1);
+}
+.scale-leave.scale-leave-active {
+  transform: scale(0);
+  transition: all 500ms ease-in-out;
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import ProjectShort from './ProjectShort'
 import ProjectData from '../data/projects.json'
 
@@ -64,17 +65,13 @@ export default class ProjectsContainer extends React.Component {
 
         var result = this.state.projectSpecs.map(function (project, key) {
             // check that the category is selected
-            var isCategorySelected = selectCategories.some(function(cat){return cat.value == project.category;});
+            var isCategorySelected = selectCategories.some(function (cat) { return cat.value == project.category; });
             {/*project is within the years and selected category boundaries*/ }
             if (isCategorySelected && project.year >= this.state.currMinYears && project.year <= this.state.currMaxYears)
                 return <ProjectShort key={key} spec={project} />
         }, this)
         // remove undefined and null projects
-        result = result.filter(function(project) {return !!project});
-        if(!result.length)
-        {
-            return <div>Nothing really happened :(</div>
-        }
+        result = result.filter(function (project) { return !!project });
         return result;
     }
     render() {
@@ -96,8 +93,13 @@ export default class ProjectsContainer extends React.Component {
                         />
                     </div>
                 </div>
-                <div className={styles.contentArea}>
-                    {this.getRenderProjects()}
+                <div>
+                    <ReactCSSTransitionGroup className={styles.contentArea}
+                        transitionName="scale"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={500}>
+                        {this.getRenderProjects()}
+                    </ReactCSSTransitionGroup>
                 </div>
             </div>
         )

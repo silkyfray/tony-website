@@ -11,7 +11,7 @@ export default function Main(props) {
             <Header title="Tony Nikolov" />
             <div className={styles.mainContainer}>
                 <ReactCSSTransitionGroup
-                    transitionName="example"
+                    transitionName="opacity"
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={300}>
                     {React.cloneElement(props.children, {key: props.location.pathname})}
