@@ -116,10 +116,12 @@ export default class About extends React.Component {
         // render typist text
         if (this.state.skipTyping === false) {
             let currSnippet = this.state.snippets[this.state.currSnippetIndex];
+            let startDelay = currSnippet.startDelay ? currSnippet.startDelay : 0;
             snippets.push(
                 <Typist key={this.state.currSnippetIndex}
                     cursor={{ show: false }}
-                    avgTypingDelay={32}
+                    startDelay={startDelay}
+                    avgTypingDelay={40}
                     onTypingDone={this.onTypingDoneHandler.bind(this)}>
                     <div>{this.sanitiseInputText(currSnippet.text)}</div>
                 </Typist>
