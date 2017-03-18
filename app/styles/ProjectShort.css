@@ -42,6 +42,7 @@
 
 .innerBox > p {
     margin-left: 12px;
+    margin-right: 12px;
     height: 100px;   
 }
 

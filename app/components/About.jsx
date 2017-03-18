@@ -1,4 +1,6 @@
 import React from "react"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+
 import styles from '../styles/About.css';
 import Typist from 'react-typist'
 import 'react-typist/dist/Typist.css'
@@ -20,12 +22,17 @@ function SkillsAside(props) {
         <div className={props.cssStyle}>
             {props.pictureUrl && <img src={props.pictureUrl} className={styles.skillAsidePicture} />}
             <h3>{props.header}</h3>
-            <div className={styles.skillTagContainer}>
-                {
-                    props.tags.map(function (tag, key) {
-                        return (<b key={key} className={styles.skillTag}>{tag}</b>)
-                    }, this)
-                }
+            <div >
+                <ReactCSSTransitionGroup className={styles.skillTagContainer}
+                    transitionName="scale"
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={300}>
+                    {
+                        props.tags.map(function (tag, key) {
+                            return (<b key={key} className={styles.skillTag}>{tag}</b>)
+                        }, this)
+                    }
+                </ReactCSSTransitionGroup>
             </div>
         </div>
     )
@@ -112,6 +119,7 @@ export default class About extends React.Component {
             snippets.push(
                 <Typist key={this.state.currSnippetIndex}
                     cursor={{ show: false }}
+                    avgTypingDelay={32}
                     onTypingDone={this.onTypingDoneHandler.bind(this)}>
                     <div>{this.sanitiseInputText(currSnippet.text)}</div>
                 </Typist>
@@ -123,7 +131,7 @@ export default class About extends React.Component {
 
     render() {
         return (
-            <div className={styles.contentArea}>
+            <div className={styles.aboutContentArea}>
                 <SkillsAside cssStyle={styles.skillsAsideLeft}
                     header="Personal"
                     pictureUrl="https://media.licdn.com/media/AAEAAQAAAAAAAAuIAAAAJDE1Y2U5N2FkLTA4YjMtNGFiMC05ZGM0LWI0MjE4YjQwY2U0Mw.jpg"

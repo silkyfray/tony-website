@@ -21,14 +21,14 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader",
             },
-            { // reference: http://stackoverflow.com/questions/40071845/how-to-import-css-from-node-modules-in-webpack-angular2-app
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader'],
-                include: [/node_modules/]
-            },
+            // { // reference: http://stackoverflow.com/questions/40071845/how-to-import-css-from-node-modules-in-webpack-angular2-app
+            //     test: /\.css$/,
+            //     loaders: ['style-loader', 'css-loader'],
+            //     include: [/node_modules/]
+            // },
             {
                 test: /\.css$/,
-                exclude: [/node_modules/],
+                // exclude: [/node_modules/],
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
                     use: [
@@ -38,7 +38,8 @@ module.exports = {
                                 modules: true,
                                 importLoaders: 1,
                                 sourceMap: true,
-                                localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+                                // localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+                                localIdentName: '[local]',
                             }
                         },
                         'postcss-loader',

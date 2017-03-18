@@ -12,7 +12,7 @@ var routes = (
             <IndexRoute component={ProjectsContainer} />
             <Route path="/projects" component={ProjectsContainer}/>
             <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact}/>
+            {/*<Route path="/contact" component={Contact}/>*/}
         </Route>
     </Router>
 );

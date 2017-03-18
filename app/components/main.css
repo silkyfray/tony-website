@@ -4,5 +4,8 @@
 }
 
 body {
-    background: #101010
+    background: #101010;
+    width:100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }

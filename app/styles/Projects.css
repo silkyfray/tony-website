@@ -1,14 +1,45 @@
 .yearSlider {
     width: 300px;
+    margin: 0 20px 10px 0;
+}
+
+.selectDropdown {
+    min-width: 300px;
+    font-size: 15px;
+    margin: 0 20px 10px 0;
+}
+
+.Select-control {
+    border-radius: 6px;
+    border: 3px solid #65bee8;
+    background: inherit;
+}
+.is-open > .Select-control {
+    background: black;
+    border: 3px solid #65bee8;
+}
+.Select-menu-outer {
+    background: black;
+    border: 2px solid #65bee8;
+}
+
+.Select-option {
+    background: black;
+    color: white;
+}
+
+.Select-option.is-focused {
+    color: white;
 }
 
 .filterToolbar{
     margin-top: 20px;
     composes: contentCenteringBox from './Theme.css';
+    align-items: center;
+
 }
 
 .contentArea{
     margin-top: 20px;
     composes: contentCenteringBox from './Theme.css';
 }
-
