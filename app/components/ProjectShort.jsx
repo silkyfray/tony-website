@@ -26,6 +26,7 @@ export default function ProjectShort(props) {
                     {props.spec.githubUrl && <ShareButton destinationUrl={props.spec.githubUrl} buttonUrl="/data/img/githubIcon.svg" />}
                     {props.spec.youtubeUrl && <ShareButton destinationUrl={props.spec.youtubeUrl} buttonUrl="/data/img/youtubeIcon.svg" />}
                     {props.spec.documentUrl && <ShareButton destinationUrl={props.spec.documentUrl} buttonUrl="/data/img/documentIcon.svg" />}
+                    {props.spec.mobileUrl && <ShareButton destinationUrl={props.spec.mobileUrl} buttonUrl="/data/img/ic_phone_iphone_black_24px.svg" />}
                 </div>
                 <p>{props.spec.summary}</p>
             </div>
