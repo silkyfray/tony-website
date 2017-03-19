@@ -1,0 +1,71 @@
+{
+    "projectSpecs": [
+        {
+            "header": "CompiTheme Website",
+            "year": 2017,
+            "category": "Personal",
+            "summary": "React.js, webpack and handcrafted css power this minimalistic website.",
+            "pictureUrl": "data/img/iconPadded.png",
+            "githubUrl": "https://github.com/silkyfray/tony-website"
+        },
+        {
+            "header": "Mouse Escape",
+            "year": 2016,
+            "category": "Personal",
+            "summary": "Mice comes out of their little holes in the wall and your objective is to guide them back to other holes in the wall before cats get a sniff. Unity game engine.",
+            "pictureUrl": "data/img/ProjectMouseEscape.png",
+            "githubUrl": "https://github.com/silkyfray/EscapePrototype",
+            "youtubeUrl": "https://www.youtube.com/watch?v=1P5p29etE44"
+        },
+        {
+            "header": "Spot The Difference",
+            "year": 2016,
+            "category": "Work",
+            "summary": "Spot The Difference is a fun little puzzle game where you search for the differences in two identical images. Find the differences before the timer runs out. C++, cocos2dx, iOS.",
+            "pictureUrl": "http://is5.mzstatic.com/image/thumb/Purple69/v4/46/c0/68/46c06860-698f-6943-000d-98a28013471f/source/175x175bb.jpg",
+            "mobileUrl": "https://itunes.apple.com/ie/app/spot-difference!-whats-difference/id1055597441?mt=8&ign-mpt=uo%3D4"
+        },
+        {
+            "header": "Word Search",
+            "year": 2015,
+            "category": "Work",
+            "summary": "Word Search is an iOS game that works on iPhone, iPad and iPod where you look to match the words on the screen in the fastest time and win stars to complete quests. C++, cocos2dx, iOS.",
+            "pictureUrl": "http://is3.mzstatic.com/image/thumb/Purple69/v4/fd/c3/83/fdc38389-6a39-7004-900b-40ca3517d94e/source/175x175bb.jpg",
+            "mobileUrl": "https://itunes.apple.com/ie/app/word-search-newspaper-word/id1028970431?mt=8&ign-mpt=uo%3D4"
+        },
+        {
+            "header": "Luapath",
+            "year": 2014,
+            "category": "Personal",
+            "summary": "Luapath is a C++ library which makes loading of tables from Lua files very easy. C++, Lua.",
+            "githubUrl": "https://github.com/silkyfray/luapath"
+        },
+        {
+            "header": "Volume Rendering Optimisations for Mobile Devices",
+            "year": 2015,
+            "category": "College",
+            "summary": "Research Dissertation for the degree of Master in Computer Science. C++, OpenGL, Android NDK",
+            "pictureUrl": "data/img/VolumeRenderingCell.png",
+            "githubUrl": "https://github.com/silkyfray/AndroidVolumeRenderer",
+            "documentUrl": "https://drive.google.com/file/d/0Bxtcgc4YLzzoSm52a0hxeVN4eDA/view"
+        },
+        {
+            "header": "Interactive Watercolor Rendering",
+            "year": 2015,
+            "category": "College",
+            "summary": "Demonstration of a non-photorealistic rendering style using watercolour abstraction. C++, OpenGL",
+            "pictureUrl": "data/img/watercolorRendering.png",
+            "githubUrl": "https://github.com/silkyfray/CS7055-RealTimeRendering/tree/master/FinalProject",
+            "youtubeUrl": "https://www.youtube.com/watch?v=PO0V5WqseoU"
+        },
+        {
+            "header": "Order of the Black Hand",
+            "year": 2014,
+            "category": "College",
+            "summary": "Hand crafting code to do animation in 3D. I have to say animation has been the most difficult programming subject I have encountered. C++, OpenGL, Lua, Blender.",
+            "pictureUrl": "data/img/BlackHand.png",
+            "githubUrl": "https://github.com/silkyfray/CS7033-Animation-Interactive-Project",
+            "youtubeUrl": "https://www.youtube.com/watch?v=YvTjiZkeq-A"
+        }
+    ]
+}

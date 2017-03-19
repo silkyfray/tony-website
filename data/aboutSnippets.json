@@ -1,0 +1,250 @@
+[
+    {
+        "text": "Hi, I am Tony. This is me on the left.",
+        "startDelay": 500,
+        "autoContinue": true
+    },
+    {
+        "text": "Press the 'Next' button at the bottom to find out more."
+    },
+    {
+        "text": "I live in Dublin, Ireland and...",
+        "autoContinue": true
+    },
+    {
+        "text": "I like my coffee with a spoon of powder chocolate and bit a of milk.",
+        "autoContinue": true,
+        "startDelay": 1000,
+        "tags": [
+            {
+                "category": "personal",
+                "value": "likes chocolate"
+            }
+        ]
+    },
+    {
+        "text": "Hey, you may be eager to learn about my professional experience so let's start with that first.",
+        "startDelay": 500
+    },
+    {
+        "text": "After studying for 5 years in Trinity College, I graduated with a Masters in Computer Science. In 4th year I had did a 6 month internship with Revenue. My official title was 'Executive Officer' which I thought was very fancy at the time.",
+        "tags": [
+            {
+                "category": "technical",
+                "value": "Computer Science"
+            }
+        ]
+    },
+    {
+        "text": "I was a developer for two new reporting applications that improved the internal workflow within the organisation. I don't have current working knowledge of most of the frameworks I used so I won't list them.",
+        "autoContinue": true,
+        "tags": [
+            {
+                "category": "technical",
+                "value": "Subversion"
+            },
+            {
+                "category": "technical",
+                "value": "SQL"
+            },
+            {
+                "category": "technical",
+                "value": "Java"
+            },
+            {
+                "category": "technical",
+                "value": "client-server architecture"
+            }
+        ]
+    },
+    {
+        "text": "Along the way I picked valuable organisational and teamwork skills.",
+        "startDelay": 400,
+        "tags": [
+            {
+                "category": "technical",
+                "value": "Iterative Development"
+            },
+            {
+                "category": "technical",
+                "value": "Release Management"
+            },
+            {
+                "category": "technical",
+                "value": "Requirements Gatherings"
+            }
+        ]
+    },
+    {
+        "text": "Towards the end of my studies I programmed primarily in C++. I focused on computer graphics and my dissertation was a study on speed optimisations for volume rendering.",
+        "tags": [
+            {
+                "category": "technical",
+                "value": "C++"
+            },
+            {
+                "category": "technical",
+                "value": "OpenGL"
+            },
+            {
+                "category": "technical",
+                "value": "Linear Algebra"
+            },
+            {
+                "category": "technical",
+                "value": "Computer Graphics"
+            },
+            {
+                "category": "technical",
+                "value": "Visual Studio"
+            },
+            {
+                "category": "technical",
+                "value": "Scripting"
+            }
+        ]
+    },
+    {
+        "text": "On the back end of that I found a job as a junior C++ game developer at Bluebear. Yay, I got to work on games.",
+        "autoContinue": true,
+        "tags": [
+            {
+                "category": "technical",
+                "value": "iOS development"
+            },
+            {
+                "category": "technical",
+                "value": "XCode"
+            }
+        ]
+    },
+    {
+        "text": "Released two mobile titles on iOS, albeit small, highly polished. Also had \"fun\" porting legacy 32-bit C++ code. And solidified up more organisational skills.",
+        "tags": [
+            {
+                "category": "technical",
+                "value": "git"
+            },
+            {
+                "category": "technical",
+                "value": "Scrum"
+            }
+        ]
+    },
+    {
+        "text": "Today I work as a software engineer at Automsoft in a tightly-knit team responsible for the development of frontend and backend solutions for the RAPID platform - a time-series data historian technology. We store and analyse data from industrial processes.",
+        "autoContinue": true,
+        "tags": [
+            {
+                "category": "technical",
+                "value": "Test-Driven Development"
+            },
+            {
+                "category": "technical",
+                "value": "Jira"
+            },
+            {
+                "category": "technical",
+                "value": "C#"
+            },
+            {
+                "category": "technical",
+                "value": ".NET"
+            },
+            {
+                "category": "technical",
+                "value": "MongoDB"
+            }
+        ]
+    },
+    {
+        "text": "I am enjoying doing web development on the side and at work.",
+        "autoContinue": true,
+        "startDelay": 500,
+        "tags": [
+            {
+                "category": "technical",
+                "value": "React.js"
+            }
+        ]
+    },
+    {
+        "text": "Ok, enough with technical stuff.",
+        "autoContinue": true,
+        "startDelay": 200
+    },
+    {
+        "text": "I grew up in Sofia before I moved to Ireland half a life ago.",
+        "startDelay": 300,
+        "tags": [
+            {
+                "category": "personal",
+                "value": "fluent English"
+            },
+            {
+                "category": "personal",
+                "value": "fluent Bulgarian"
+            }
+        ]
+    },
+    {
+        "text": "On the subject of delicious endeavors, I like coned icecream. The crunchiness mixed with the sweet, cool icecream make for a perfect couch dessert.",
+        "autoContinue": true,
+        "tags": [
+            {
+                "category": "personal",
+                "value": "coned icecream"
+            }
+        ]
+    },
+    {
+        "text": "In the evening I sit down and relax after a hard day's work and sob through an episode of 'This is Us' or marvel at the stupidity of 'The Walking Dead' characters.",
+        "startDelay": 400,
+        "tags": [
+            {
+                "category": "personal",
+                "value": "TV and movies"
+            }
+        ]
+    },
+    {
+        "text": "I am a Manchester United and Mclaren fan. Yeah, it's not a great time to be a sports fan for me.",
+        "tags": [
+            {
+                "category": "personal",
+                "value": "Football"
+            },
+            {
+                "category": "personal",
+                "value": "Formula 1"
+            }
+        ]
+    },
+    {
+        "text": "I spend more time playing video games and Dota 2 than I'd like to admit.",
+        "autoContinue": true,
+        "tags": [
+            {
+                "category": "personal",
+                "value": "video games"
+            },
+            {
+                "category": "personal",
+                "value": "Dota 2"
+            }
+        ]
+    },
+    {
+        "text": "Recently, I started doing some Photoshop and drawing but I am not very good at it.",
+        "startDelay": 400,
+        "tags": [
+            {
+                "category": "personal",
+                "value": "learning to draw"
+            }
+        ]
+    },
+    {
+        "text": "I guess that is all for now. Thank you for listening."
+    }
+]
