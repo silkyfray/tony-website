@@ -1,4 +1,5 @@
 import React from "react"
+import ReactDOM from "react-dom"
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import styles from '../styles/About.css';
@@ -8,8 +9,9 @@ import 'react-typist/dist/Typist.css'
 import AboutData from '../data/aboutSnippets.json'
 
 function InputButton(props) {
+    var nextButtonStyle = props.animate ? { transform: "scale(1.2)"} : null;
     return (
-        <span className={styles.chatBoxInputButton}
+        <span className={styles.chatBoxInputButton} style={nextButtonStyle}
             onClick={props.onClickHandler}>
             <img src={props.imageUrl} />
             {props.children}
@@ -22,18 +24,16 @@ function SkillsAside(props) {
         <div className={props.cssStyle}>
             {props.pictureUrl && <img src={props.pictureUrl} className={styles.skillAsidePicture} />}
             <h3>{props.header}</h3>
-            <div >
-                <ReactCSSTransitionGroup className={styles.skillTagContainer}
-                    transitionName="scale"
-                    transitionEnterTimeout={500}
-                    transitionLeaveTimeout={300}>
-                    {
-                        props.tags.map(function (tag, key) {
-                            return (<b key={key} className={styles.skillTag}>{tag}</b>)
-                        }, this)
-                    }
-                </ReactCSSTransitionGroup>
-            </div>
+            <ReactCSSTransitionGroup className={styles.skillTagContainer}
+                transitionName="scale"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
+                {
+                    props.tags.map(function (tag, key) {
+                        return (<b key={key} className={styles.skillTag}>{tag}</b>)
+                    }, this)
+                }
+            </ReactCSSTransitionGroup>
         </div>
     )
 }
@@ -60,25 +60,38 @@ export default class About extends React.Component {
         //     return false;
         return true;
     }
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.animateNext)
+            this.setState({ animateNext: false })
+    }
     // Callback handlers
     onNextHandler() {
         this.setNextSnippet(this.state.currSnippetIndex + 1);
+        this.scrollToBottom();
     }
     onSkipHandler() {
         this.setState({ skipTyping: true });
-        this.setNextSnippet(this.state.snippets.length - 1)
+        this.setNextSnippet(this.state.snippets.length - 1);
+        this.scrollToBottom();
     }
     onTypingDoneHandler() {
         var currSnippet = this.state.snippets[this.state.currSnippetIndex];
+        // skip or flash the next button
         if (currSnippet.autoContinue === true) {
             this.setNextSnippet(this.state.currSnippetIndex + 1);
         }
+        this.setState({ animateNext: !currSnippet.autoContinue })
+        this.scrollToBottom();
     }
     // state mutation 
     setNextSnippet(index) {
         // increment the current snippet. Clamp.
         var index = Math.min(index, this.state.snippets.length - 1);
         this.setState({ currSnippetIndex: index })
+    }
+    scrollToBottom() {
+        const node = ReactDOM.findDOMNode(this.snippetsEnd);
+        node.scrollIntoView({ block: "end", behavior: "smooth" });
     }
     // helpers
     sanitiseInputText(text) {
@@ -117,13 +130,13 @@ export default class About extends React.Component {
         if (this.state.skipTyping === false) {
             let currSnippet = this.state.snippets[this.state.currSnippetIndex];
             let startDelay = currSnippet.startDelay ? currSnippet.startDelay : 0;
-            snippets.push(
+            snippets.push( 
                 <Typist key={this.state.currSnippetIndex}
-                    cursor={{ show: false }}
+                    cursor={{ show: true }}
                     startDelay={startDelay}
-                    avgTypingDelay={40}
+                    avgTypingDelay={41}
                     onTypingDone={this.onTypingDoneHandler.bind(this)}>
-                    <div>{this.sanitiseInputText(currSnippet.text)}</div>
+                    <div style={{ float: "left" }}>{this.sanitiseInputText(currSnippet.text)}</div>
                 </Typist>
             )
         }
@@ -146,9 +159,11 @@ export default class About extends React.Component {
                 <div className={styles.chatBoxContainer}>
                     <div className={styles.chatBoxMessages}>
                         {this.renderSnippets()}
+                        {/*this an autoscroll dummy*/}
+                        <div style={{ width: "100%", height: "120px" }} ref={(el) => { this.snippetsEnd = el }}></div>
                     </div>
-                    <div className={styles.chatBoxInput}>
-                        <InputButton imageUrl="/data/img/ic_play_arrow_white_36px.svg"
+                    <div className={styles.chatBoxInput} >
+                        <InputButton animate={this.state.animateNext} imageUrl="/data/img/ic_play_arrow_white_36px.svg"
                             onClickHandler={this.onNextHandler.bind(this)}>
                             Next
                 </InputButton>
