@@ -163,11 +163,11 @@ export default class About extends React.Component {
                         <div style={{ width: "100%", height: "120px" }} ref={(el) => { this.snippetsEnd = el }}></div>
                     </div>
                     <div className={styles.chatBoxInput} >
-                        <InputButton animate={this.state.animateNext} imageUrl="/data/img/ic_play_arrow_white_36px.svg"
+                        <InputButton animate={this.state.animateNext} imageUrl="data/img/ic_play_arrow_white_36px.svg"
                             onClickHandler={this.onNextHandler.bind(this)}>
                             Next
                 </InputButton>
-                        <InputButton imageUrl="/data/img/ic_fast_forward_white_36px.svg"
+                        <InputButton imageUrl="data/img/ic_fast_forward_white_36px.svg"
                             onClickHandler={this.onSkipHandler.bind(this)}>
                             Skip to the end
                 </InputButton>
