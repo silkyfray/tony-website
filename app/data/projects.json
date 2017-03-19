@@ -5,7 +5,7 @@
             "year": 2017,
             "category": "Personal",
             "summary": "React.js, webpack and handcrafted css power this minimalistic website.",
-            "pictureUrl": "/data/img/iconPadded.png",
+            "pictureUrl": "data/img/iconPadded.png",
             "githubUrl": "https://github.com/silkyfray/tony-website"
         },
         {
@@ -13,7 +13,7 @@
             "year": 2016,
             "category": "Personal",
             "summary": "Mice comes out of their little holes in the wall and your objective is to guide them back to other holes in the wall before cats get a sniff. Unity game engine.",
-            "pictureUrl": "/data/img/ProjectMouseEscape.png",
+            "pictureUrl": "data/img/ProjectMouseEscape.png",
             "githubUrl": "https://github.com/silkyfray/EscapePrototype",
             "youtubeUrl": "https://www.youtube.com/watch?v=1P5p29etE44"
         },
