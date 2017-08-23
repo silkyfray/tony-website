@@ -1,6 +1,14 @@
 {
     "projectSpecs": [
         {
+            "header": "RAPID Platform",
+            "year": 2017,
+            "category": "Work",
+            "summary": "An expansive data historian written in a C++/.NET/React/MongoDB stack.",
+            "pictureUrl": "https://www.automsoft.com/images/rapid.png",
+            "mobileUrl": "https://www.automsoft.com/rapid-data-historian"
+        },
+        {
             "header": "CompiTheme Website",
             "year": 2017,
             "category": "Personal",
